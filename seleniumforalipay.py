@@ -17,7 +17,7 @@ w.find_element_by_css_selector("textarea[seed=\"inputField-content\"]").send_key
 time.sleep(2)
 w.find_element_by_id("main-submit-btn").click()
 time.sleep(10)
-w.find_element_by_css_selector("a[seed=\"PCportal_self_helpful\"]").click()
+w.find_element_by_css_selector("a[seed=\"PCportal_self_toYunzaixian\"]").click()
 time.sleep(2)
 soup=bs(w.page_source,"html.parser")
 soupe=soup.find_all(class_="server")
