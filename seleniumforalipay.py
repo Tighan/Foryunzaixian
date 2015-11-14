@@ -4,7 +4,7 @@ from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.keys import Keys
 import time
-from bs4 import BeautifulSoup as bs
+
 display = Display(visible=0, size=(800, 600))
 display.start()
 
@@ -19,9 +19,9 @@ w.find_element_by_id("main-submit-btn").click()
 time.sleep(10)
 w.find_element_by_css_selector("a[seed=\"PCportal_self_toYunzaixian\"]").click()
 time.sleep(2)
-soup=bs(w.page_source,"html.parser")
-soupe=soup.find_all(class_="server")
-print soupe[4].text
+num=w.find_elements_by_css_selector("div[class=\"content\"]")[4].text
+print num
 w.quit()
+
 
 display.stop()
