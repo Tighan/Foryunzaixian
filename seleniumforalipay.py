@@ -8,15 +8,15 @@ import time
 display = Display(visible=0, size=(800, 600))
 display.start()
 count=0
-while count <=20:
+while count <=50:
 
         w=webdriver.Firefox()
 
         w.get('https://cschannel.alipay.com/portal.htm?sourceId=114&enterurl=https://cshall.alipay.com/hall/index.htm')
-	w.find_element_by_css_selector("textarea[seed=\"inputField-content\"]").send_keys(u"退款未到帐")
+	w.find_element_by_css_selector("textarea[seed=\"inputField-content\"]").send_keys(u"淘宝退款没到帐")
 	time.sleep(2)
 	w.find_element_by_id("main-submit-btn").click()
-	w.find_element_by_css_selector("textarea[seed=\"inputField-content\"]").send_keys(u"退款未到帐")
+	w.find_element_by_css_selector("textarea[seed=\"inputField-content\"]").send_keys(u"淘宝退款没到帐")
 	time.sleep(2)
 	w.find_element_by_id("main-submit-btn").click()
 	print "add custom times:",count
